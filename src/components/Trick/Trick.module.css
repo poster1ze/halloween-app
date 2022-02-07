@@ -1,0 +1,126 @@
+.Trick {
+    padding: 4.5rem 0 2rem;
+    overflow: hidden;
+}
+
+.TrickOrTreatTitle {
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-2);
+    text-align: center;
+}
+
+.Container {
+    max-width: 968px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding-top: 1rem;
+}
+
+.TrickContent {
+    position:relative;
+    background: var(--container-color);
+    border-radius: 1rem;
+    padding: 1.5rem 0 1rem 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.TrickContent:hover > img  {
+    transform: translateY(-.5rem);
+}
+
+.TrickImage {
+    width: 90px;
+    transition: .3s;
+}
+
+.Button {
+    display: inline-flex;
+    background-color: var(--first-color);
+    color: var(--title-color);
+    padding: .5rem;
+    border-radius: .25rem .25rem .75rem .25rem;
+    position: absolute;
+    right: -3rem;
+    bottom: 0;
+    font-weight: var(--font-medium);
+    transition: .3s;
+    cursor: pointer;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+.TrickContent:hover > button {
+    right: 0
+}
+
+.TrickTitle,
+.TrickPrice {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    font-size: var(--normal-font-size);
+}
+
+.TrickSubTitle,
+.TrickPrice {
+    display: block;
+}
+
+.TrickSubTitle {
+    font-size: var(--smaller-font-size);
+    margin-bottom: var(--mb-0-5);
+}
+
+.TrickIcon {
+    font-size: 1.25rem;
+    color: var(--title-color);
+}
+
+@media screen and (max-width: 320px) {
+    .Container {
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
+        grid-template-columns: .8fr;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .Trick {
+        padding: 7rem 0 2rem;
+    }
+
+    .Container {
+        grid-template-columns: repeat(3, 200px);
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .Container {
+        margin-right: auto;
+        margin-left: auto;
+        gap: 3.5rem;
+    }
+
+    .TrickOrTreatTitle {
+        font-size: var(--h1-font-size);
+        margin-bottom: 3rem;
+    }
+
+    .TrickContent {
+        border-radius: 1.5rem;
+    }
+
+    .TrickImage {
+        width: 110px;
+    }
+
+    .TrickTitle {
+        font-size: var(--h3-font-size);
+    }
+}

@@ -1,0 +1,81 @@
+.Discount {
+    padding: 4.5rem 0 2rem;
+    overflow: hidden;
+}
+
+.Container {
+    max-width: 968px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+    display: grid;
+    background: var(--container-color);
+    border-radius: 1rem;
+    padding: 2.5rem 0 1.5rem;
+    row-gap: .75rem;
+}
+
+.DiscountData {
+    text-align: center;
+}
+
+.DiscountTitle {
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-2);
+}
+
+.DiscountImage {
+    width: 200px;
+    justify-self: center;
+}
+
+.DiscountButton {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: var(--title-color);
+    padding: 1rem 1.75rem;
+    border-radius: .5rem;
+    font-weight: var(--font-medium);
+    transition: .3s;
+    cursor: pointer;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+@media screen and (max-width: 320px) {
+    .Container {
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .Discount {
+        padding: 7rem 0 2rem;
+    }
+
+    .Container {
+        grid-template-columns: repeat(2, max-content);
+        justify-content: center;
+        align-items: center;
+        column-gap: 3rem;
+        padding: 3rem 0;
+        border-radius: 3rem;
+    }
+
+    .DiscountImage {
+        width: 350px;
+        order: -1;
+    }
+
+    .DiscountData {
+        padding-right: 6rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .Container {
+        margin-right: auto;
+        margin-left: auto;
+        column-gap: 7rem;
+    }
+}

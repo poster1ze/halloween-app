@@ -1,0 +1,106 @@
+.About {
+    padding: 4.5rem 0 2rem;
+    overflow: hidden;
+}
+
+.Container {
+    max-width: 968px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+    display: grid;
+    row-gap: 2rem;
+}
+
+.AboutData {
+    text-align: center;
+}
+
+.AboutTitle {
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-2);
+    text-align: center;
+}
+
+.AboutDescription {
+    margin-bottom: var(--mb-2);
+}
+
+.AboutButton {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    display: inline-block;
+    background-color: var(--first-color);
+    color: var(--title-color);
+    padding: 1rem 1.75rem;
+    border-radius: .5rem;
+    font-weight: var(--font-medium);
+    transition: .3s;
+}
+
+.AboutButton:hover {
+    background-color: var(--first-color-alt);
+}
+
+.AboutImage {
+    width: 200px;
+    justify-self: center;
+}
+
+@media screen and (max-width: 320px) {
+    .Container {
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .Container {
+        grid-template-columns: .8fr;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .About {
+        padding: 7rem 0 2rem;
+    }
+
+    .Container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .AboutTitle,
+    .AboutData {
+        text-align: initial;
+    }
+
+    .AboutImage {
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .Container {
+        margin-right: auto;
+        margin-left: auto;
+        column-gap: 7rem;
+    }
+
+    .AboutTitle {
+        font-size: var(--h1-font-size);
+        margin-bottom: 3rem;
+    }
+
+    .AboutImage {
+        width: 350px;
+    }
+
+    .AboutDescription {
+        padding-right: 2rem;
+    }
+}
+

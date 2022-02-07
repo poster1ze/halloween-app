@@ -1,0 +1,150 @@
+.Arrivals {
+    padding: 4.5rem 0 2rem;
+    overflow: hidden;
+}
+
+.ArrivalsMainTitle {
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-2);
+    text-align: center;
+}
+
+.Container {
+    max-width: 968px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+    padding-top: 1rem;
+}
+
+.Container :global(.swiper-slide) {
+    width: auto;
+}
+
+.ArrivalsContent {
+    position: relative;
+    background: var(--container-color);
+    width: 242px;
+    padding: 2rem 0 1.5rem 0;
+    border-radius: .75rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.ArrivalsTag {
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    background-color: var(--first-color);
+    color: var(--title-color);
+    font-size: var(--small-font-size);
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+}
+
+.ArrivalsImage {
+    width: 120px;
+    margin-bottom: var(--mb-0-5);
+    transition: .3s;
+}
+
+.ArrivalsContent:hover > img  {
+    transform: translateY(-.5rem);
+}
+
+.ArrivalsTitle {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.ArrivalsSubTitle {
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-0-5);
+}
+
+.ArrivalsPrices {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.ArrivalsPrice {
+    font-weight: var(--font-medium);
+    color: var(--title-color)
+}
+
+.ArrivalsDiscount {
+    color: var(--first-color);
+    font-size: var(--smaller-font-size);
+    text-decoration: line-through;
+    font-weight: var(--font-medium);
+}
+
+.Button {
+    display: inline-flex;
+    background-color: var(--first-color);
+    color: var(--title-color);
+    padding: .5rem;
+    border-radius: .25rem .25rem .75rem .25rem;
+    position: absolute;
+    right: -3rem;
+    bottom: 0;
+    font-weight: var(--font-medium);
+    transition: .3s;
+    cursor: pointer;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+.ArrivalsContent:hover > button {
+    right: 0;
+}
+
+.ArrivalsIcon {
+    font-size: 1.25rem;
+}
+
+@media screen and (max-width: 320px) {
+    .Container {
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .Arrivals {
+        padding: 7rem 0 2rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .Container {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .ArrivalsMainTitle {
+        margin-bottom: 3rem;
+        font-size: var(--h1-font-size);
+    }
+
+    .ArrivalsContent {
+        width: 310px;
+        border-radius: 1rem;
+        padding: 2rem 0 ;
+    }
+
+    .ArrivalsImage {
+        width: 150px;
+        margin-bottom: var(--mb-1);
+    }
+
+    .ArrivalsTitle {
+        font-size: var(--h3-font-size);
+    }
+
+    .ArrivalsSubTitle {
+        margin-bottom: var(--mb-1);
+    }
+}
+

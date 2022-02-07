@@ -1,0 +1,211 @@
+.Main {
+    overflow: hidden;
+}
+
+.Container {
+    max-width: 968px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+    padding: 4.5rem 0 2rem;
+}
+
+.SwiperSlide {
+    padding: 4.5rem 0 2rem;
+}
+
+.HomeContent {
+    display: grid;
+}
+
+.HomeGroup {
+    display: grid;
+    position: relative;
+    padding-top: 2rem;
+}
+
+.HomeImage {
+    height: 250px;
+    justify-self: center;
+}
+
+.HomeIndicator {
+    width: 8px;
+    height: 8px;
+    background-color: var(--title-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 7rem;
+    right: 2rem;
+}
+
+.HomeIndicator:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 48px;
+    background-color: var(--title-color);
+    top: -3rem;
+    right: 45%;
+}
+
+.HomeDetailsImage {
+    position: absolute;
+    right: .5rem;
+}
+
+.HomeDetailsTitle,
+.HomeDetailsSubTitle {
+    display: block;
+    font-size: var(--small-font-size);
+    text-align: right;
+}
+
+.HomeSubTitle {
+    font-size: var(--h3-font-size);
+    text-transform: uppercase;
+    margin-bottom: var(--mb-1);
+}
+
+.HomeTitle {
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-black);
+    line-height: 109%;
+    margin-bottom: var(--mb-1);
+}
+
+.HomeDescription {
+    margin-bottom: var(--mb-1);
+}
+
+.HomeButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Button {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: var(--title-color);
+    padding: 1rem 1.75rem;
+    border-radius: .5rem;
+    font-weight: var(--font-medium);
+    transition: .3s;
+    cursor: pointer;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+.Button:hover {
+    background-color: var(--first-color-alt);
+}
+
+.ButtonLink {
+    color: var(--title-color);
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    cursor: pointer;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+.IconArrow {
+    font-size: 1.25rem;
+}
+
+.SwiperWrapper :global(.swiper-pagination-bullet) {
+    background: #fff;
+    opacity: 0.3;
+}
+
+.SwiperWrapper :global(.swiper-pagination-bullet-active) {
+    background: var(--first-color);
+    border-radius: 0.3rem;
+    opacity: 0.9;
+    }
+
+@media screen and (max-width: 320px) {
+    .Container {
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
+    }
+
+    .HomeImage {
+        height: 200px;
+    }
+
+    .HomeButtons {
+        flex-direction: column;
+        width: max-content;
+        row-gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .Container,
+    .SwiperSlide {
+        padding: 7rem 0 2rem;
+    }
+    .HomeContent {
+        padding: 8rem 0 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
+
+    .HomeImage {
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .Container {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .HomeContent {
+        padding-top: 9rem;
+    }
+
+    .HomeGroup {
+        padding-top: 0;
+    }
+
+    .HomeImage {
+        height: 400px;
+        transform: translateY(-3rem);
+    }
+
+    .HomeIndicator {
+        top: initial;
+        right: initial;
+        bottom: 15%;
+        left: 45%;
+    }
+
+    .HomeIndicator:after {
+        top: 0;
+        height: 75px;
+    }
+
+    .HomeDetailsImage {
+        bottom: 0;
+        right: 58%;
+    }
+
+    .HomeTitle {
+        margin-bottom: var(--mb-1-5);
+    }
+
+    .HomeDescription {
+        margin-bottom: var(--mb-2-5);
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .HomeImage {
+        height: 420px;
+    }
+}
+
